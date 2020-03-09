@@ -1,5 +1,7 @@
 # Project Proposal
 
+![homepage](public/assets/homepage.png)
+
 ## Intro
 
 This project __OptimiceDashboard__ is again a complimentary project of my physical project [OptiMice](https://jasontsemf.github.io/optimice.html) that was first exhibited at 2019 ITP Winter Show. The ultimate deliverable of this project is to develop a business, which includes a __web platform__ that allows users to
