@@ -10,7 +10,7 @@ This project __OptimiceDashboard__ is again a complimentary project of my physic
 
 2. View the post-analysis 3D model
 
-3. Configure and make order
+3. Configure and make orders
 
 4. Post-order hardware configurating software
 
@@ -24,7 +24,7 @@ Here are some of the technical elements that I want to include
 
 - Order: frontend and table on `MongoDB`
 
-- Using three.js to show 3D interpretation of a mouse model
+- Using three.js to show a 3D interpretation of a mouse model
 
 ## Reference
 
