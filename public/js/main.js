@@ -1,6 +1,8 @@
 window.addEventListener("DOMContentLoaded", () => {
     const button = document.getElementById("btn");
     const input = document.getElementById("email");
+    const orderButton = document.getElementById("order-btn");
+
     input.addEventListener("keyup", function(event) {
         if (event.keyCode === 13) {
           event.preventDefault();
@@ -27,7 +29,24 @@ window.addEventListener("DOMContentLoaded", () => {
         msg.innerHTML = `Thank you for signing up, our ${numberToOrdinal(person.ordinal)} follower! <br>${link}`;
         name.value = "";
         email.value = "";
-    }
+    };
+    orderButton.onclick = async () => {
+        // let name = document.getElementById("name");
+        // let email = document.getElementById("email");
+        const response = await fetch('/api/orders', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        });
+        const person = await response.json();
+        // const list = document.getElementById("people-list");
+        // const msg = document.getElementById("message");
+        // const link = `Return to <a href="https://jasontsemf.github.io/optimice.html">OptiMice Page</a>`;
+        // msg.innerHTML = `Thank you for signing up, our ${numberToOrdinal(person.ordinal)} follower! <br>${link}`;
+        // name.value = "";
+        // email.value = "";
+    };
 });
 
 function numberToOrdinal(i) {

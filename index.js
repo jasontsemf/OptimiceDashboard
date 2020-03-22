@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const config = require('./config');
 const PORT = config.PORT;
 const mongoose = require('mongoose');
+const moment = require('moment');
 
 const MONGODB_URI = config.MONGODB_URI;
 mongoose.connect(MONGODB_URI, {
@@ -16,6 +17,7 @@ mongoose.connect(MONGODB_URI, {
 });
 
 const peopleDB = require('./models/people');
+const ordersDB = require('./models/orders');
 
 app.use(
   bodyParser.urlencoded({
@@ -53,6 +55,34 @@ app.post('/api/signup', async (req, res, next) => {
       ordinal: String(data.length+1)
     };
     const newData = await peopleDB.create(newPost);
+    res.json(newData);
+  } catch (error) {
+    res.json({
+      error: JSON.stringify(error)
+    });
+    console.log(error);
+  }
+});
+
+app.post('/api/orders', async (req, res, next) => {
+  try {
+    const addr = {
+      country: "United States",
+      street_1: "370 Jay Street",
+      street_2: "4th Floor",
+      city: "Brooklyn",
+      state: "NY",
+      zip_code: 11201,
+    } ;
+    const newPost = {
+      model_url: "./assets/3d/mouse.obj",
+      color: "Black",
+      price: 100,
+      shipping_addr: addr,
+      status: "Paid",
+      shippped_date: moment.utc('2020-03-21')
+    };
+    const newData = await ordersDB.create(newPost);
     res.json(newData);
   } catch (error) {
     res.json({
