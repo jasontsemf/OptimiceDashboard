@@ -76,7 +76,6 @@ app.post('/api/orders', async (req, res, next) => {
     } ;
     const newPost = {
       model_url: "./assets/3d/mouse.obj",
-      color: "Black",
       price: 100,
       shipping_addr: addr,
       status: "Paid",
@@ -92,6 +91,6 @@ app.post('/api/orders', async (req, res, next) => {
   }
 });
 
-app.listen(process.env.port || 3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server listening at http://localhost:3000!")
 });
