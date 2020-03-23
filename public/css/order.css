@@ -1,3 +1,66 @@
+.form-field {
+    border: none;
+    background: white;
+    outline: none;
+    float: right;
+    padding: 0;
+    color: #3d3d3d;
+    font-size: 16px;
+    /* transition: 0.6s; */
+    /* line-height: 45px; */
+    width: 40%;
+    padding: 0 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 1em;;
+}
+
+.form-field-center {
+    border: none;
+    background: white;
+    outline: none;
+    padding: 0;
+    color: #3d3d3d;
+    font-size: 16px;
+    /* transition: 0.6s; */
+    /* line-height: 45px; */
+    width: 30%;
+    padding: 0 20px;
+    margin-top: 5px;;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 1em;;
+}
+
+.form-row{
+
+}
+
+.tab-active {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: #ededed;
+    box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.tab-inactive {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 50px;
+
+}
+
+.block {
+    margin: 10px;
+    /* padding: 15px; */
+    border-radius: 1em;
+    background-color: #ededed;
+    box-shadow: 0px -6px 10px rgba(255, 255, 255, 1), 0px 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
 .head-option{
     margin-top: auto;
     margin-bottom: auto;
@@ -13,6 +76,7 @@ canvas {
     /* top: 0%; */
     /* z-index: -1; */
     border-radius: 1em;
+    border: 1px solid #ededed;
 }
 
 #logo{
@@ -38,7 +102,7 @@ article,
 aside {
     margin: 1px;
     border-radius: 1em;
-    background-color: #ccc;
+    /* background-color: #ccc; */
     display: flex;
     text-align: center;
     flex-direction: column;
@@ -119,8 +183,7 @@ footer {
 
 .alert-box {
     /* background-color: red; */
-    border: 1px solid black;
-
+    /* border: 1px solid black; */
 }
 
 .pad {

@@ -29,27 +29,27 @@
       <article style="width: 200px;">
         <div id="logo">Optimice</div>
       </article>
-      <article class="flex" id="1" onclick="navigate(this.id)">
+      <article class="flex tab-active" id="1" onclick="navigate(this.id); container.appendChild( renderer.domElement );">
         <div class="head-option">
           1. Preview
         </div>
       </article>
-      <article class="flex" id="2" onclick="navigate(this.id)">
+      <article class="flex tab-inactive" id="2" onclick="navigate(this.id); container2.appendChild( renderer.domElement );">
         <div class="head-option">
           2. Exterior
         </div>
       </article>
-      <article class="flex" id="3" onclick="navigate(this.id)">
+      <article class="flex tab-inactive" id="3" onclick="navigate(this.id)">
         <div class="head-option">
           3. Interior
         </div>
       </article>
-      <article class="flex" id="4" onclick="navigate(this.id)">
+      <article class="flex tab-inactive" id="4" onclick="navigate(this.id)">
         <div class="head-option">
           4. Shipping
         </div>
       </article>
-      <article class="flex" id="5" onclick="navigate(this.id)">
+      <article class="flex tab-inactive" id="5" onclick="navigate(this.id)">
         <div class="head-option">
           5. Payment
         </div>
@@ -60,118 +60,130 @@
     </header>
 
     <section id="d1" class="main hbox space-between">
-      <!-- <article style="width: 100px">fixed 150px</article> -->
-      <article class="flex2" id="mouse">
+      <article class="flex2 block" id="mouse">
       </article>
-      <!-- <article class="flex">
-            flex
-          </article> -->
       <article class="flex pad">
         <section class="main vbox space-between">
           <!-- <article class="alert-box" style="height: 140px">fixed: 140px</article> -->
 
-          <article class="flex2 alert-box">flex</article>
-          <article class="flex2 alert-box">flex</article>
-          <article class="flex4 alert-box">flex</article>
+          <article class="flex2 block hide"></article>
+          <article class="flex4 block">
+            <div class="detail-option">
+              <h1>Model Detail</h1>
+              <p>Length: 5.04in</p>
+              <p>Width: 3.43in</p>
+              <p>Height: 1.84in</p>
+            </div>
+          </article>
+          <article class="flex2 block hide">flex</article>
 
         </section>
       </article>
     </section>
 
     <section id="d2" class="main hbox space-between" style="display: none;">
-      <!-- <article style="width: 100px">fixed 150px</article> -->
-      <article class="flex2" id="mouse">
-        d2
+      <article class="flex2 block" id="mouse-exterior">
       </article>
-      <!-- <article class="flex">
-            flex
-          </article> -->
       <article class="flex pad">
         <section class="main vbox space-between">
-          <article class="flex alert-box hide"></article>
-          <article class="flex alert-box">
+          <article class="flex hide block"></article>
+          <article class="flex block">
             <div class="detail-option">
               <p>Material</p>
-              <input type="radio" id="resin" name="material" value="resin">
-              <label for="resin">Resin</label>
-              <input type="radio" id="pbt" name="material" value="pbt">
-              <label for="pbt">PBT</label>
-              <input type="radio" id="abs" name="material" value="abs">
-              <label for="abs">ABS</label>
+              <p>
+                <input type="radio" id="resin" name="material" value="resin" onchange="changeMaterial(this)">
+                <label for="resin">Resin</label>
+                <input type="radio" id="pbt" name="material" value="pbt" onchange="changeMaterial(this)">
+                <label for="pbt">PBT</label>
+                <input type="radio" id="abs" name="material" value="abs" onchange="changeMaterial(this)">
+                <label for="abs">ABS</label>
+              </p>
             </div>
           </article>
-          <article class="flex alert-box">
+          <article class="flex block">
             <div class="detail-option">
               <p>Color</p>
-              <input type="radio" id="black" name="color" value="black">
-              <label for="black">Black</label>
-              <input type="radio" id="white" name="color" value="white">
-              <label for="white">White</label>
+              <p>
+                <input type="radio" id="black" name="color" value="black" onchange="changeColor(this)">
+                <label for="black">Black</label>
+                <input type="radio" id="white" name="color" value="white" onchange="changeColor(this)">
+                <label for="white">White</label>
+              </p>
             </div>
           </article>
-          <article class="flex alert-box hide"></article>
+          <article class="flex hide block"></article>
         </section>
       </article>
     </section>
 
     <section id="d3" class="main hbox space-between" style="display: none;">
-      <article class="flex2" id="mouse">
+      <article class="flex2 block">
         d3
       </article>
       <article class="flex pad">
         <section class="main vbox space-between">
-          <article class="flex alert-box hide"></article>
-          <article class="flex alert-box">
+          <article class="flex hide block"></article>
+          <article class="flex block">
             <div class="detail-option">
               <p>Connectivity</p>
-              <input type="radio" id="2.4ghz" name="connectivity" value="2.4ghz">
-              <label for="2.4ghz">2.4GHz</label>
-              <input type="radio" id="bt" name="connectivity" value="bt">
-              <label for="bt">Bluetooth</label>
-              <input type="radio" id="both" name="connectivity" value="both">
-              <label for="both">Both</label>
+              <p>
+                <input type="radio" id="2.4ghz" name="connectivity" value="2.4ghz">
+                <label for="2.4ghz">2.4GHz</label>
+                <input type="radio" id="bt" name="connectivity" value="bt">
+                <label for="bt">Bluetooth</label>
+                <input type="radio" id="both" name="connectivity" value="both">
+                <label for="both">Both</label>
+              </p>
             </div>
           </article>
-          <article class="flex alert-box">
+          <article class="flex block">
             <div class="detail-option">
               <p>Sensor</p>
-              <input type="radio" id="avago" name="sensor" value="avago">
-              <label for="avago">Avago</label>
-              <input type="radio" id="pixart" name="sensor" value="pixart">
-              <label for="pixart">PixArt</label>
+              <p>
+                <input type="radio" id="avago" name="sensor" value="avago">
+                <label for="avago">Avago</label>
+                <input type="radio" id="pixart" name="sensor" value="pixart">
+                <label for="pixart">PixArt</label>
+              </p>
             </div>
           </article>
-          <article class="flex alert-box hide"></article>
+          <article class="flex hide block"></article>
         </section>
       </article>
     </section>
 
     <section id="d4" class="main hbox space-between" style="display: none;">
-      <article class="flex2" id="mouse">
+      <article class="flex2 block">
         d4
       </article>
       <article class="flex pad">
         <section class="main vbox space-between">
-          <article class="flex alert-box hide"></article>
-          <article class="flex2 alert-box">
+          <article class="flex hide block"></article>
+          <article class="flex3 block">
             <div class="detail-option">
-              <label for="country">Country</label>
-              <select id="country">
-                <option value="US">United States</option>
-              </select><br><br>
-              <label for="street_1">Street Line 1</label>
-              <input type="text" id="street_1" name="street_1"><br><br>
-              <label for="street_2">Street Line 2</label>
-              <input type="text" id="street_2" name="street_2"><br><br>
+              <div class="form-row">
+                <label for="country">Country</label>
+                <select id="country" class="form-field">
+                  <option value="US">United States</option>
+                </select><br><br>
+              </div>
+              <div class="form-row">
+                <label for="street_1">Street Line 1</label>
+                <input type="text" id="street_1" name="street_1" class="form-field"><br><br>
+              </div>
+              <div class="form-row">
+                <label for="street_2">Street Line 2</label>
+                <input type="text" id="street_2" name="street_2" class="form-field"><br><br>
+              </div>
               <label for="city">City</label>
-              <input type="text" id="city" name="city"><br><br>
+              <input type="text" id="city" name="city" class="form-field"><br><br>
               <label for="state">State</label>
-              <select id="state">
+              <select id="state" class="form-field">
                 <option value="NY">New York</option>
                 <option value="CA">California</option>
               </select><br><br>
               <label for="zip_code">Zip Code</label>
-              <input type="text" id="zip_code" name="zip_code"><br><br>
+              <input type="text" id="zip_code" name="zip_code" class="form-field">
             </div>
           </article>
           <article class="flex alert-box hide"></article>
@@ -180,70 +192,52 @@
     </section>
 
     <section id="d5" class="main hbox space-between hidden-page" style="display: none;">
-      <article class="flex2 pad" id="mouse">
-        <article class="flex2 alert-box">
+      <article class="flex2">
+        <article class="flex2  block">
           <div class="detail-option">
             <h1>Customer Details</h1>
             <label for="fname">First Name</label><br>
-            <input type="text" id="fname" name="fname"><br><br>
+            <input type="text" id="fname" name="fname" class="form-field-center"><br><br>
             <label for="lname">Last Name</label><br>
-            <input type="text" id="lname" name="lname"><br><br>
+            <input type="text" id="lname" name="lname" class="form-field-center"><br><br>
             <label for="phone">Phone</label><br>
-            <input type="text" id="phone" name="phone"><br><br>
+            <input type="text" id="phone" name="phone" class="form-field-center"><br><br>
           </div>
         </article>
-        <article class="flex3 alert-box">
+        <article class="flex3 block">
           <div class="detail-option">
             <h1>Payment</h1>
             <label for="nameoncard">Name on Card</label><br>
-            <input type="text" id="nameoncard" name="nameoncard"><br><br>
+            <input type="text" id="nameoncard" name="nameoncard" class="form-field-center"><br><br>
             <label for="cardno">Credit Card Number</label><br>
-            <input type="text" id="cardno" name="cardno"><br><br>
+            <input type="text" id="cardno" name="cardno" class="form-field-center"><br><br>
             <label for="expdate">Expiration Date</label><br>
-            <input type="date" id="expdate" name="expdate"><br><br>
+            <input type="date" id="expdate" name="expdate" class="form-field-center"><br><br>
             <label for="cvv">CVV</label><br>
-            <input type="text" id="cvv" name="cvv"><br><br>
+            <input type="text" id="cvv" name="cvv" class="form-field-center"><br><br>
             <label for="billzip">Billing Zip Code</label><br>
-            <input type="text" id="billzip" name="billzip"><br><br>
+            <input type="text" id="billzip" name="billzip" class="form-field-center"><br><br>
           </div>
         </article>
       </article>
       <article class="flex pad">
         <section class="main vbox space-between">
-          <article class="flex alert-box">
+          <article class="flex block hide">
+          </article>  
+          <article class="flex4 block">
             <div class="detail-option">
               <h1>Order Summary</h1>
               <p>Price: $100</p>
             </div>
           </article>
-          <article class="alert-box" style="height: 140px">
+          <article class="flex" style="height: 140px">
             <div class="detail-option">
-              <button id="btn">Place Order</button>
+              <button class="btn">Place Order</button>
             </div>
           </article>
         </section>
       </article>
     </section>
-
-
-    <!-- <section class="hbox space-between" style="height: 240px">
-          <article class="flex pad">
-            <section class="main vbox space-between">
-              <article class="alert-box"
-               style="height: 140px" >fixed: 140px</article>
-              <article class="flex alert-box">flex</article>
-              <article class="flex alert-box">flex</article>
-            </section>
-          </article>
-          <article class="flex">flex</article>
-        </section> -->
-
-    <!-- <section class="main hbox space-between">
-          <article class="flex3">flex 3x</article>
-          <article class="flex right">flex align - right</article>
-        </section>
-      
-        <footer>fixed: 50px</footer> -->
   </div>
 </body>
 
