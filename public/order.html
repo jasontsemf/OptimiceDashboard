@@ -21,6 +21,7 @@
   <!-- <script src="http://threejs.org/examples/js/Detector.js"></script> -->
   <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
   <script src="js/3dmouseControl.js"></script>
+  <script src="js/order.js"></script>
 
   <div class="vbox viewport">
     <!-- <header>header</header> -->
@@ -30,27 +31,27 @@
       </article>
       <article class="flex">
         <div class="head-option">
-          <a href="">1. Preview</a>
+          <a id="1" onclick="navigate(this.id)">1. Preview</a>
         </div>
       </article>
       <article class="flex">
         <div class="head-option">
-          <a href="">2. Exterior</a>
+          <a id="2" onclick="navigate(this.id)">2. Exterior</a>
         </div>
       </article>
       <article class="flex">
         <div class="head-option">
-          <a href="">3. Interior</a>
+          <a id="3" onclick="navigate(this.id)">3. Interior</a>
         </div>
       </article>
       <article class="flex">
         <div class="head-option">
-          <a href="">4. Shipping</a>
+          <a id="4" onclick="navigate(this.id)">4. Shipping</a>
         </div>
       </article>
       <article class="flex">
         <div class="head-option">
-          <a href="">5. Payment</a>
+          <a id="5" onclick="navigate(this.id)">5. Payment</a>
         </div>
       </article>
       <article style="width: 200px;">
@@ -58,13 +59,69 @@
       </article>
     </header>
 
-    <section class="main hbox space-between">
+    <section id = "d1" class="main hbox space-between">
       <!-- <article style="width: 100px">fixed 150px</article> -->
       <article class="flex2" id="mouse">
       </article>
       <!-- <article class="flex">
             flex
           </article> -->
+      <article class="flex pad">
+        <section class="main vbox space-between">
+          <article class="alert-box" style="height: 140px">fixed: 140px</article>
+          <article class="flex alert-box">flex</article>
+          <article class="flex alert-box">flex</article>
+        </section>
+      </article>
+    </section>
+
+    <section id = "d2" class="main hbox space-between" style="display: none;">
+      <!-- <article style="width: 100px">fixed 150px</article> -->
+      <article class="flex2" id="mouse">
+        d2
+      </article>
+      <!-- <article class="flex">
+            flex
+          </article> -->
+      <article class="flex pad">
+        <section class="main vbox space-between">
+          <article class="alert-box" style="height: 140px">fixed: 140px</article>
+          <article class="flex alert-box">flex</article>
+          <article class="flex alert-box">flex</article>
+        </section>
+      </article>
+    </section>
+
+    <section id = "d3" class="main hbox space-between" style="display: none;">
+      <article class="flex2" id="mouse">
+        d3
+      </article>
+      <article class="flex pad">
+        <section class="main vbox space-between">
+          <article class="alert-box" style="height: 140px">fixed: 140px</article>
+          <article class="flex alert-box">flex</article>
+          <article class="flex alert-box">flex</article>
+        </section>
+      </article>
+    </section>
+
+    <section id = "d4" class="main hbox space-between" style="display: none;">
+      <article class="flex2" id="mouse">
+        d4
+      </article>
+      <article class="flex pad">
+        <section class="main vbox space-between">
+          <article class="alert-box" style="height: 140px">fixed: 140px</article>
+          <article class="flex alert-box">flex</article>
+          <article class="flex alert-box">flex</article>
+        </section>
+      </article>
+    </section>
+
+    <section id = "d5" class="main hbox space-between hidden-page" style="display: none;">
+      <article class="flex2" id="mouse">
+        d5
+      </article>
       <article class="flex pad">
         <section class="main vbox space-between">
           <article class="alert-box" style="height: 140px">fixed: 140px</article>

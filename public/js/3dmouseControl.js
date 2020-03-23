@@ -29,6 +29,8 @@ function init() {
     container = document.getElementById("mouse");
     cWidth = container.clientWidth;
     cHeight = container.clientHeight;
+    windowHalfX = container.clientWidth / 2;
+    windowHalfY = container.clientHeight / 2;
     console.log(cWidth);
     console.log(cHeight);
 
@@ -92,13 +94,13 @@ function init() {
 }
 
 function onWindowResize() {
-    windowHalfX = window.innerWidth / 2;
-    windowHalfY = window.innerHeight / 2;
+    windowHalfX = container.clientWidth / 2;
+    windowHalfY = container.clientHeight / 2;
 
-    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.aspect = container.clientWidth / container.clientHeight;
     camera.updateProjectionMatrix();
 
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( container.clientWidth, container.clientHeight );
 }
 
 function onDocumentMouseMove( event ) {
@@ -112,11 +114,11 @@ function animate() {
 }
 
 function render() {
-    obj.rotation.y += (0.2*(Math.PI / 180));
-    obj.rotation.y %=360;
+    // obj.rotation.y += (0.2*(Math.PI / 180));
+    // obj.rotation.y %=360;
 
-    // camera.position.x += ( mouseX - camera.position.x ) * .05;
-    // camera.position.y += ( - mouseY - camera.position.y ) * .05;
+    camera.position.x += ( mouseX - camera.position.x ) * .05;
+    camera.position.y += ( - mouseY - camera.position.y ) * .05;
 
     camera.lookAt( scene.position );
 
