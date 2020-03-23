@@ -47,14 +47,14 @@ window.addEventListener("DOMContentLoaded", () => {
                 "connectivity": connectivity,
                 "sensor": sensor,
                 "price": 100,
-                "shipping_addr": JSON.stringify({
+                "shipping_addr": {
                     "country": country,
                     "street_1": street_1,
                     "street_2": street_2,
                     "city": city,
                     "state": state,
                     "zip_code": zip_code
-                }),
+                },
                 "status": "Paid",
             }),
             headers: {
