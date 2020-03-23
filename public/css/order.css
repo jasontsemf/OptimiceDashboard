@@ -71,6 +71,12 @@
     margin-bottom: auto;
 }
 
+.block-img{
+    width: 80%;
+    border-radius: 1em;
+    margin: auto;
+}
+
 canvas {
     /* position: absolute; */
     /* top: 0%; */
