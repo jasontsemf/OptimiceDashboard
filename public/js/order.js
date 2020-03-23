@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", () => {
                     "state": state,
                     "zip_code": zip_code
                 }),
-                "status": "paid",
+                "status": "Paid",
             }),
             headers: {
                 "Content-Type": "application/json"
@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
         const order = await response.json();
         console.log(order);
-        if(order.status === "paid"){
+        if(order.status === "Paid"){
             location.href = "confirm.html";
         }
         // alert("thank you for your purchase");
