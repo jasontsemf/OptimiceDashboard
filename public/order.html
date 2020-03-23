@@ -59,7 +59,7 @@
       </article>
     </header>
 
-    <section id = "d1" class="main hbox space-between">
+    <section id="d1" class="main hbox space-between">
       <!-- <article style="width: 100px">fixed 150px</article> -->
       <article class="flex2" id="mouse">
       </article>
@@ -68,14 +68,17 @@
           </article> -->
       <article class="flex pad">
         <section class="main vbox space-between">
-          <article class="alert-box" style="height: 140px">fixed: 140px</article>
-          <article class="flex alert-box">flex</article>
-          <article class="flex alert-box">flex</article>
+          <!-- <article class="alert-box" style="height: 140px">fixed: 140px</article> -->
+
+          <article class="flex2 alert-box">flex</article>
+          <article class="flex2 alert-box">flex</article>
+          <article class="flex4 alert-box">flex</article>
+
         </section>
       </article>
     </section>
 
-    <section id = "d2" class="main hbox space-between" style="display: none;">
+    <section id="d2" class="main hbox space-between" style="display: none;">
       <!-- <article style="width: 100px">fixed 150px</article> -->
       <article class="flex2" id="mouse">
         d2
@@ -85,27 +88,65 @@
           </article> -->
       <article class="flex pad">
         <section class="main vbox space-between">
-          <article class="alert-box" style="height: 140px">fixed: 140px</article>
-          <article class="flex alert-box">flex</article>
-          <article class="flex alert-box">flex</article>
+          <article class="flex alert-box hide"></article>
+          <article class="flex alert-box">
+            <div class="detail-option">
+              <p>Material</p>
+              <input type="radio" id="resin" name="material" value="resin">
+              <label for="resin">Resin</label>
+              <input type="radio" id="pbt" name="material" value="pbt">
+              <label for="pbt">PBT</label>
+              <input type="radio" id="abs" name="material" value="abs">
+              <label for="abs">ABS</label>
+            </div>
+          </article>
+          <article class="flex alert-box">
+            <div class="detail-option">
+              <p>Color</p>
+              <input type="radio" id="black" name="color" value="black">
+              <label for="black">Black</label>
+              <input type="radio" id="white" name="color" value="white">
+              <label for="white">White</label>
+            </div>
+          </article>
+          <article class="flex alert-box hide"></article>
         </section>
       </article>
     </section>
 
-    <section id = "d3" class="main hbox space-between" style="display: none;">
+    <section id="d3" class="main hbox space-between" style="display: none;">
       <article class="flex2" id="mouse">
         d3
       </article>
       <article class="flex pad">
         <section class="main vbox space-between">
-          <article class="alert-box" style="height: 140px">fixed: 140px</article>
-          <article class="flex alert-box">flex</article>
-          <article class="flex alert-box">flex</article>
+          <article class="flex alert-box hide"></article>
+          <article class="flex alert-box">
+            <div class="detail-option">
+              <p>Connectivity</p>
+              <input type="radio" id="2.4ghz" name="connectivity" value="2.4ghz">
+              <label for="2.4ghz">2.4GHz</label>
+              <input type="radio" id="bt" name="connectivity" value="bt">
+              <label for="bt">Bluetooth</label>
+              <input type="radio" id="both" name="connectivity" value="both">
+              <label for="both">Both</label>
+            </div>
+          </article>
+          <article class="flex alert-box">
+            <div class="detail-option">
+              <p>Sensors</p>
+              <input type="radio" id="avago" name="sensor" value="avago">
+              <label for="avago">Avago</label>
+              <input type="radio" id="pixart" name="sensor" value="pixart">
+              <label for="pixart">PixArt</label>
+            </div>
+          </article>
+          <article class="flex alert-box hide"></article>
         </section>
       </article>
     </section>
 
-    <section id = "d4" class="main hbox space-between" style="display: none;">
+    <section id="d4" class="main hbox space-between" style="display: none;">
       <article class="flex2" id="mouse">
         d4
       </article>
@@ -118,7 +159,7 @@
       </article>
     </section>
 
-    <section id = "d5" class="main hbox space-between hidden-page" style="display: none;">
+    <section id="d5" class="main hbox space-between hidden-page" style="display: none;">
       <article class="flex2" id="mouse">
         d5
       </article>

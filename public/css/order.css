@@ -3,6 +3,11 @@
     margin-bottom: auto;
 }
 
+.detail-option{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
 canvas {
     /* position: absolute; */
     /* top: 0%; */
@@ -113,9 +118,15 @@ footer {
 }
 
 .alert-box {
-    background-color: red;
+    /* background-color: red; */
+    border: 1px solid black;
+
 }
 
 .pad {
     padding: 10px;
+}
+
+.hide{
+    visibility: hidden;
 }
