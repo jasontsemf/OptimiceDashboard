@@ -67,19 +67,22 @@ app.post('/api/signup', async (req, res, next) => {
 app.post('/api/orders', async (req, res, next) => {
   try {
     const addr = {
-      country: "United States",
-      street_1: "370 Jay Street",
-      street_2: "4th Floor",
-      city: "Brooklyn",
-      state: "NY",
-      zip_code: 11201,
+      country: String(req.body.shipping_addr.country),
+      street_1: String(req.body.shipping_addr.street_1),
+      street_2: String(req.body.shipping_addr.street_2),
+      city: String(req.body.shipping_addr.city),
+      state: String(req.body.shipping_addr.state),
+      zip_code: req.body.shipping_addr.zip_code
     } ;
     const newPost = {
-      model_url: "./assets/3d/mouse.obj",
-      price: 100,
+      model_url: String(req.body.model_url),
+      material: String(req.body.material),
+      color: String(req.body.color),
+      connectivity: String(req.body.connectivity),
+      sensor: String(req.body.sensor),
+      price: req.body.price,
       shipping_addr: addr,
-      status: "Paid",
-      shippped_date: moment.utc('2020-03-21')
+      status: String(req.body.status),
     };
     const newData = await ordersDB.create(newPost);
     res.json(newData);
