@@ -12,23 +12,31 @@ window.addEventListener("DOMContentLoaded", () => {
     button.onclick = async () => {
         let name = document.getElementById("name");
         let email = document.getElementById("email");
-        const response = await fetch('/api/signup', {
-            method: "POST",
-            body: JSON.stringify({
-                "name": name.value,
-                "email": email.value
-            }),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
-        const person = await response.json();
-        const list = document.getElementById("people-list");
-        const msg = document.getElementById("message");
-        const link = `Return to <a href="https://jasontsemf.github.io/optimice.html">OptiMice Page</a>`;
-        msg.innerHTML = `Thank you for signing up, our ${numberToOrdinal(person.ordinal)} follower! <br>${link}`;
-        name.value = "";
-        email.value = "";
+        if(name.value == ""){
+            alert("Please type you name");
+        }
+        if(email.value == ""){
+            alert("Please type you email");
+        }
+        if (name.value != "" || email.value != ""){
+            const response = await fetch('/api/signup', {
+                method: "POST",
+                body: JSON.stringify({
+                    "name": name.value,
+                    "email": email.value
+                }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            const person = await response.json();
+            const list = document.getElementById("people-list");
+            const msg = document.getElementById("message");
+            const link = `Return to <a href="https://jasontsemf.github.io/optimice.html">OptiMice Page</a>`;
+            msg.innerHTML = `Thank you for signing up, our ${numberToOrdinal(person.ordinal)} follower! <br>${link}`;
+            name.value = "";
+            email.value = "";
+        }
     };
     orderButton.onclick = async () => {
         // let name = document.getElementById("name");

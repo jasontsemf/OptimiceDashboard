@@ -74,6 +74,74 @@ I decided to establish 6 pages in total
 
 ![order wireframe](README/order_wireframe.png)
 
-### Mockup
+#### Mockup
 
-[Mockup on Figma](https://www.figma.com/file/B7v9FoAAIiuAXctt3scEK8/OptiMice)
+[Project on Figma](https://www.figma.com/file/B7v9FoAAIiuAXctt3scEK8/OptiMice)
+
+### Front End Development
+
+Most of the front end components are being brought from some previous project to this final project, including
+
+- [Neumorphism](https://github.com/jasontsemf/Neumorphism)
+  - soft style HTML element and CSS
+- [Populate](https://github.com/jasontsemf/Populate)
+  - Input field, getting reading and style
+- [OptimiceSignupMongo](https://github.com/jasontsemf/OptimiceSignupMongo)
+  - A Holistic framework of the front end
+
+However, the bugs that I didn't solve are removed when they are carried forward to this project
+
+![New Landing Page](public/assets/homepage.png)
+
+![GitHub](README/github.png)
+
+There is a new GitHub icon that brings the user to the original hardware project repository, which uses the font-awesome library.
+
+``` HTML
+<link rel="stylesheet" href="fa/css/all.css">
+<i class="fab fa-github top-right"></i>
+```
+
+``` CSS
+.top-right {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+}
+```
+
+And I heavily depend on `margin-left: auto` and `margin-right: auto` to center elements on the screen.
+
+``` CSS
+.landing-mouse {
+    width: 30%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+```
+
+![phone screen](README/phonescreen.png)
+
+The input field on the signup page is now fixed with `@media` CSS query. So that the input field would not become too narrow on a phone screen.
+
+``` CSS
+.landing-mouse {
+    width: 30%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .landing-mouse {
+        width: 70%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+```

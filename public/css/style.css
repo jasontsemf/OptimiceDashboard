@@ -7,7 +7,7 @@ body {
     background-color: #f1f1f1;
 }
 
-.bg {
+.landing-mouse {
     width: 30%;
     height: 100%;
     margin-left: auto;
@@ -15,7 +15,7 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-    .bg {
+    .landing-mouse {
         width: 70%;
         height: 100%;
         margin-left: auto;
