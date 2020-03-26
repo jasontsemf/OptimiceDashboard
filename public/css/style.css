@@ -7,19 +7,22 @@ body {
     background-color: #f1f1f1;
 }
 
-/* .bg{
-    background-image: url(/public/assets/bg.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-} */
-
-.bg{
-    width: 40%;
+.bg {
+    width: 30%;
+    height: 100%;
     margin-left: auto;
     margin-right: auto;
 }
+
+@media only screen and (max-width: 600px) {
+    .bg {
+        width: 70%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 
 .wrapper {
     position: absolute;
@@ -48,7 +51,7 @@ body {
     }
 }
 
-.top-right{
+.top-right {
     position: absolute;
     top: 0%;
     right: 0%;
