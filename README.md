@@ -42,4 +42,38 @@ Here are some of the technical elements that I want to include
 
 ## Project Development
 
-### Back-end
+### Completed Task
+
+I took Cassie's advice into consideration, and adjusted my expectation by a little.
+
+- Establish a general site flow and information architecture
+
+- Order: frontend and table on `MongoDB`
+
+- Using three.js to show a 3D interpretation of a mouse model
+  
+### Web Design
+
+I decided to establish 6 pages in total
+
+1. landing
+2. login
+3. signup
+4. login-landing/dashboard
+5. order
+   1. preview
+   2. exterior
+   3. interior
+   4. shipping
+   5. payment
+6. confirm
+
+#### Wireframe
+
+![dashboard wireframe](README/dashboard_wireframe.png)
+
+![order wireframe](README/order_wireframe.png)
+
+### Mockup
+
+[Mockup on Figma](https://www.figma.com/file/B7v9FoAAIiuAXctt3scEK8/OptiMice)
