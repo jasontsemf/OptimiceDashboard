@@ -42,9 +42,11 @@ canvas {
 }
 
 #slogan{
-    margin-top: auto;
-    margin-bottom: auto;
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    margin: auto;
     font-size: 70px;
+    width: 70%;
 }
 
 /* seperator */
