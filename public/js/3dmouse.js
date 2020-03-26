@@ -26,7 +26,7 @@ function init() {
     // scene
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xdddddd);
+    scene.background = new THREE.Color(0xf1f1f1);
 
     var ambient = new THREE.AmbientLight( 0x101030 );
     scene.add( ambient );
