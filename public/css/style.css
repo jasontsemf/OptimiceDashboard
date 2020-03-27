@@ -14,7 +14,7 @@ body {
     margin-right: auto;
 }
 
-@media (min-width: 576px) {
+@media only screen and (max-width: 768px) {
     .landing-mouse {
         width: 70%;
         height: 100%;
