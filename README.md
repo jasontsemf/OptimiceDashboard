@@ -76,6 +76,8 @@ I decided to establish 6 pages in total
 
 #### Mockup
 
+![figma](README/figma.png)
+
 [Project on Figma](https://www.figma.com/file/B7v9FoAAIiuAXctt3scEK8/OptiMice)
 
 ### Front End Development
