@@ -1,5 +1,27 @@
 # OptiMice Web Platform
 
+## Table of Content
+- [OptiMice Web Platform](#optimice-web-platform)
+  - [Table of Content](#table-of-content)
+  - [Intro](#intro)
+  - [Project Proposal](#project-proposal)
+    - [Expectation](#expectation)
+    - [Reference](#reference)
+  - [Project Development](#project-development)
+    - [Infrastructure Diagram](#infrastructure-diagram)
+    - [Completed Task](#completed-task)
+    - [Web Design](#web-design)
+      - [Wireframe](#wireframe)
+      - [High Fidelity Mockup](#high-fidelity-mockup)
+    - [Back End Development](#back-end-development)
+      - [APIs end points](#apis-end-points)
+        - [`POST`](#post)
+        - [`GET`](#get)
+      - [Models](#models)
+    - [Front End Development](#front-end-development)
+      - [Threejs](#threejs)
+      - [HTML & CSS](#html--css)
+
 ![homepage](public/assets/homepage.png)
 
 [OptMice Web Platform on Heroku](https://optimice.herokuapp.com/)
