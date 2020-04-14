@@ -21,7 +21,6 @@ app.use(
     })
   );
 app.use(bodyParser.json());
-// const publicURL = path.resolve(`${__dirname}/public`);
 app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({

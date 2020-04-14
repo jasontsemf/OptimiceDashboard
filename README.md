@@ -42,6 +42,10 @@ Here are some of the technical elements that I want to include
 
 ## Project Development
 
+### Infrastructure Diagram
+
+![infrastructure](README/infra.png)
+
 ### Completed Task
 
 I took Cassie's advice into consideration, and adjusted my expectation by a little.
@@ -74,11 +78,71 @@ I decided to establish 6 pages in total
 
 ![order wireframe](README/order_wireframe.png)
 
-#### Mockup
+#### High Fidelity Mockup
 
 [Project on Figma](https://www.figma.com/file/B7v9FoAAIiuAXctt3scEK8/OptiMice)
 
+![figma](README/figma.png)
+
+### Back End Development
+
+#### APIs end points
+
+##### `POST`
+
+``` javascript
+// sign up for new letter
+/api/signup/
+
+// example post body
+{
+  "name": "Jason Tse",
+  "email": "jasontse@email.com",
+}
+```
+
+``` javascript
+// make an order
+/api/orders
+
+// example post body
+const newPost = {
+  "model_url": "/model/qweIUHlkjhVJ.obj",
+  "material": "resin",
+  "color": "white",
+  "connectivity": "both",
+  "sensor": "avago",
+  "price": 99,
+  "shipping_addr": {
+      "country": "United States",
+      "street_1": "5 Washington Square Village Apt",
+      "street_2": "99Z",
+      "city": "New York",
+      "state": "NY",
+      "zip_code": 00000
+    } ;
+};
+```
+
+##### `GET`
+
+``` javascript
+// get total count of signed up customers
+/api/total_count
+
+//example response body
+{
+  "number": 246
+}
+```
+
+#### Models
+
 ### Front End Development
+
+#### Threejs
+
+#### HTML & CSS
 
 Most of the front end components are being brought from some previous project to this final project, including
 
