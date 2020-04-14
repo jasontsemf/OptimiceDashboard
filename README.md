@@ -126,7 +126,11 @@ And I heavily depend on `margin-left: auto` and `margin-right: auto` to center e
 }
 ```
 
-![phone screen](README/phonescreen.png|width=300)
+<<<<<<< HEAD
+![phone screen](README/phonescreen.png)
+=======
+![phone screen](README/phonescreen.png | width=300)
+>>>>>>> parent of 207e2b4... again
 
 The input field on the signup page is now fixed with `@media` CSS query. So that the input field would not become too narrow on a phone screen.
 
