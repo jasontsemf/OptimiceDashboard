@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="css/hand.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="fa/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://threejs.org/build/three.min.js"></script>
+    <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+    <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script defer src="js/3dhand.js"></script>
+</head>
+
+<body>
+    <div class="vbox viewport">
+        <header class="hbox space-between">
+            <article style="width: 200px;">
+                <div id="logo">Optimice</div>
+            </article>
+            <article style="width: 100px;">
+                <div id="logo">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </article>
+        </header>
+
+        <!-- <section class="hbox space-between" style="height: 240px">
+
+            <article class="flex pad">
+                <section class="main vbox space-between">
+                    <article class="alert-box" style="height: 140px">fixed: 140px</article>
+                    <article class="flex alert-box">flex</article>
+                    <article class="flex alert-box">flex</article>
+                </section>
+            </article>
+            <article class="flex">flex</article>
+        </section> -->
+
+        <!-- login to generate mouse -->
+        <section class="main hbox space-between">
+            <!-- <article class="flex3">flex 3x</article>
+              <article class="flex right">flex align - right</article> -->
+            <article class="flex">
+                <h1 id="slogan">Log in to generate your bespoke mouse</h2>
+            </article>
+        </section>
+
+        <footer>
+            <!-- fixed: 50px -->
+            <div class="row">
+                <button class="btn" onclick="location.href = 'login.html';">Log in</button>
+                <button class="btn" onclick="location.href = 'signup.html';">Sign up</button>
+            </div>
+        </footer>
+    </div>
+</body>
+<style>
+    body {
+        opacity: 0;
+        transition-duration: 0.7s;
+        transition-property: opacity;
+    }
+
+    body.fade {
+        opacity: 1;
+    }
+</style>
+
+</html>

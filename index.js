@@ -36,6 +36,10 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "index.html"));
 });
 
+app.get("/page/hand", (req, res) => {
+  res.sendFile(path.join(__dirname, "hand.html"));
+});
+
 app.get('/api/total_count', async (req, res, next) => {
   try {
     const data = await peopleDB.find({});

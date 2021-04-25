@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="fa/css/all.css">
+</head>
+
+<body>
+    <div class="vbox">
+        <header class="hbox space-between">
+            <article style="width: 200px;">
+                <div id="logo">Optimice</div>
+            </article>
+            <article style="width: 100px;">
+                <div id="logo">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </article>
+        </header>
+
+        <section class="main hbox space-between">
+            <!-- <article style="width: 100px">fixed 150px</article> -->
+            <!-- <article class="flex2">flex</article> -->
+            <article class="flex">
+                <h1>Tailoring with Machine learning</h1>
+                <div class="row-pad" id="msg">
+                    <p>We harness cutting edge machine learning algorithms to transform a single image of your hand into
+                        a 3D model. Try uploading a picture to have a quick preview of your virtual hand in 3D!
+                    </p>
+                </div>
+
+                <!-- some image -->
+                <div class="row-pad">
+                    <div class="img-container">
+                        <img src="assets/img/hand_to_3D.png" alt="" class="round-img" id="img">
+                    </div>
+                </div>
+
+                <div class="row-pad" id="reminder">
+                    <small style="color: #54b5ff;">
+                        * Imagine you're holding your ideal mouse with your mouse hand in a relaxed posture.
+                        It is recommended to have your palm and the inner side of your fingers in the frame for best
+                        result.
+                    </small>
+                </div>
+
+                <div class="row-pad" id="file-btn">
+                    <div class="file-input">
+                        <input type="file" name="file-input" accept="image/*" id="file-input"
+                            class="file-input__input" />
+                        <label class="btn file-input__label" for="file-input">
+                            <span><i class="fas fa-camera"></i></span></label>
+                        <!-- <span><i class="fas fa-camera"></i> Upload file</span></label> -->
+                    </div>
+                </div>
+
+                <!-- <button class="btn" onclick="location.href = 'login.html';">Login - Demo</button> -->
+                <div id="status" style="display: none">
+                    <label for="prog">Analysing...</label>
+                    <progress id="prog" value="0" max="100"> 32% </progress>
+                </div>
+                <br>
+
+
+
+
+                <!-- <a id="slogan" href="order.html">
+                    <h1>Your Optimice is Ready for Order</h1>
+                </a> -->
+
+            </article>
+        </section>
+
+    </div>
+
+    <style>
+        .file-input {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .file-input__input {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .file-input__label {
+            cursor: pointer;
+            /* display: inline-flex; */
+            align-items: center;
+            /* border-radius: 4px; */
+            font-size: 28px;
+            /* font-weight: 600; */
+            /* color: #fff; */
+            padding: 20px 70px;
+            /* background-color: #4245a8; */
+            /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.25); */
+        }
+
+        .img-container {
+            width: 75vw;
+        }
+
+        .img-container img {
+            max-height: 100%;
+            max-width: 100%;
+        }
+    </style>
+
+    <script>
+        const fileInput = document.getElementById('file-input');
+        let stat = document.getElementById("status");
+        let pro = document.getElementById("prog");
+        let img = document.getElementById("img");
+        let btn = document.getElementById("file-btn");
+        let rem = document.getElementById("reminder");
+        let msg = document.getElementById("msg");
+        let per = 0;
+
+        fileInput.addEventListener('change', (e) => doSomethingWithFiles(e.target.files));
+
+        let doSomethingWithFiles = (e) => {
+            console.log(e);
+            // post image to server
+            // play loading animation
+            let img = document.getElementById("img");
+            img.src = URL.createObjectURL(e[0]);
+            btn.style.display = "none";
+            stat.style.display = "inline";
+            img.style.visibility = "visible";
+            rem.style.display = "none";
+            msg.style.display = "none";
+            console.log(pro.value);
+            if (e[0]) {
+                let myTimer = setInterval(function () {
+                    if (per < 101) {
+                        per++;
+                        console.log(per);
+                        pro.value = per;
+                    } else {
+                        clearInterval(myTimer);
+                        console.log("redirect");
+                        location.href = "hand.html";
+
+                    }
+                }, 50);
+            }
+        }
+    </script>
+</body>
+
+</html>

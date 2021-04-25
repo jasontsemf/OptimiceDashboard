@@ -13,7 +13,28 @@ var windowHalfY = window.innerHeight / 2;
 
 var obj;
 let cWidth;
-let cHeight
+let cHeight;
+
+let button;
+let click = 0;
+
+// button = document.getElementById("btn1");
+// button.onclick = function () {
+//     click++;
+//     console.log(click);
+//     let i = 0;
+//     obj.traverse(function (child) {
+//         if (child instanceof THREE.Mesh) {
+//             if(i == click){
+//                 let material = new THREE.MeshStandardMaterial();
+//                 material.color.setHex(0x0000ff);
+//                 child.material = material;
+//             }
+//         }
+//         i++;
+//         // 146 to 148
+//     });
+// };
 
 $(document).ready(function () {
     init();
@@ -24,29 +45,30 @@ function changeMaterial(m) {
     console.log(m.value);
 }
 
-function changeColor(c) {
-    console.log(c.value);
+function changeColor(index, c) {
+    let i = 0;
     obj.traverse(function (child) {
-
         if (child instanceof THREE.Mesh) {
-            //child.material.map = texture;
-            var materials = child.material;
-            if (materials) {
+            if (i == index) {
+                let material = new THREE.MeshStandardMaterial();
+                //child.material.map = texture;
+                // var materials = child.material;
                 let cHex = 0x000000;
-                if(c.value == "white"){
+                if (c.value == "white") {
                     cHex = 0xffffff;
-                }else if(c.value == "black"){
+                    material.color.setHex(cHex);
+                } else if (c.value == "black") {
                     cHex = 0x000000;
+                    material.color.setHex(cHex);
+                }else if (c.value == "transparent"){
+                    cHex = 0xffffff;
+                    material.opacity = 0.6;
+                    material.transparent = true;
                 }
-                for (var k = 0, l = materials.length; k < l; k++) {
-                    materials[k].color.setHex(cHex);
-                }
+                child.material = material;
             }
-            //  else {
-            //     child.material.color.setHex(0xff0000);
-            // }
         }
-
+        i++;
     });
 }
 
@@ -64,19 +86,19 @@ function init() {
     console.log(cWidth);
     console.log(cHeight);
 
-    camera = new THREE.PerspectiveCamera(45, cWidth / cHeight, 1, 2000);
-    camera.position.z = 600;
+    camera = new THREE.PerspectiveCamera(24, cWidth / cHeight, 1, 2000);
+    camera.position.z = 1000;
 
     // scene
 
     scene = new THREE.Scene();
-    scene.background = new THREE.Color(0xededed);
+    scene.background = new THREE.Color(0xf1f1f1);
 
-    var ambient = new THREE.AmbientLight(0x101030);
+    var ambient = new THREE.AmbientLight(0xffffff, 0.8);
     scene.add(ambient);
 
-    var directionalLight = new THREE.DirectionalLight(0xffeedd);
-    directionalLight.position.set(0, 0, 1);
+    var directionalLight = new THREE.DirectionalLight(0xffffff, 0.2);
+    directionalLight.position.set(0, 1, 1);
     scene.add(directionalLight);
 
     // texture
@@ -90,29 +112,23 @@ function init() {
 
     // model
     var loader = new THREE.OBJLoader(manager);
-    loader.load('assets/3d/mouse.obj', function (object) {
+    loader.load('assets/3d/optimicev2.obj', function (object) {
 
+        let i = 0;
         object.traverse(function (child) {
-
+            console.log(child);
             if (child instanceof THREE.Mesh) {
-                //child.material.map = texture;
-                var materials = child.material;
-                if (materials) {
-                    for (var k = 0, l = materials.length; k < l; k++) {
-                        materials[k].color.setHex(0x0000ff);
-                    }
-                } else {
-                    child.material.color.setHex(0xff0000);
-                }
+                let material = new THREE.MeshStandardMaterial();
+                material.color.setHex(0xb8b8b8);
+                child.material = material;
             }
-
         });
 
         // object.position.x = - 60;
-        object.position.y = -80;
+        // object.position.y = -80;
         // object.rotation.x = 270* Math.PI / 180;
-        // object.rotation.y = 180* Math.PI / 180;
-        // object.rotation.z = 1* Math.PI / 180;
+        // object.rotation.y = 270* Math.PI / 180;
+        object.rotation.z = 270 * Math.PI / 180;
         object.scale.x = 2;
         object.scale.y = 2;
         object.scale.z = 2;
@@ -157,8 +173,8 @@ function render() {
     // obj.rotation.y += (0.2*(Math.PI / 180));
     // obj.rotation.y %=360;
 
-    camera.position.x += (mouseX - camera.position.x) * .05;
-    camera.position.y += (-mouseY - camera.position.y) * .05;
+    camera.position.x += (mouseX*3 - camera.position.x) * .05;
+    camera.position.y += (-mouseY*3 - camera.position.y) * .05;
 
     camera.lookAt(scene.position);
 

@@ -1,0 +1,162 @@
+*{
+    font-family: 'Open Sans';
+    color: #5e5e5e;
+}
+
+body {
+    font-family: ;
+    /* background-color: #000; */
+    color: #fff;
+    margin: 0px;
+    overflow: hidden;
+}
+
+#info {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 100;
+    display: block;
+}
+
+#info a,
+.button {
+    color: #f00;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer
+}
+
+canvas {
+    position: absolute;
+    top: 0%;
+    z-index: -1;
+}
+
+#logo{
+    margin-top: auto;
+    margin-bottom: auto;
+    font-size: 30px;
+}
+
+#slogan{
+    /* margin-top: auto;
+    margin-bottom: auto; */
+    margin: auto;
+    font-size: 65px;
+    width: 70%;
+}
+
+/* seperator */
+
+html,
+body,
+.viewport {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+
+header,
+footer,
+nav,
+article,
+aside {
+    margin: 1px;
+    border-radius: 1em;
+    /* background-color: #ccc; */
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+/* items flex/expand vertically */
+.vbox {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+/* items flex/expand horizontally */
+.hbox {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.space-between {
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+}
+
+
+header {
+    height: 80px;
+    justify-content: center;
+    /* background-color: #222; */
+    /* color: white; */
+}
+footer {
+    height: 160px;
+    justify-content: center;
+    /* background-color: #222; */
+    /* color: white; */
+}
+
+.main {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.flex {
+    flex: 1;
+}
+
+.flex2 {
+    flex: 2;
+}
+
+.flex3 {
+    flex: 3;
+}
+
+.flex4 {
+    flex: 4;
+}
+
+.fixed {
+    flex: 0;
+}
+
+/* utils */
+.right {
+    align-items: flex-end;
+}
+
+.alert-box {
+    background-color: red;
+}
+
+.pad {
+    padding: 10px;
+}

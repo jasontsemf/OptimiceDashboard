@@ -63,7 +63,7 @@ window.addEventListener("DOMContentLoaded", () => {
         });
         const order = await response.json();
         console.log(order);
-        if(order.status === "Paid"){
+        if (order.status === "Paid") {
             location.href = "confirm.html";
         }
         // alert("thank you for your purchase");

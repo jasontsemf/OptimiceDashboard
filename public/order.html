@@ -7,29 +7,24 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="css/order.css">
   <link rel="stylesheet" href="css/style.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <link rel="stylesheet" href="fa/css/all.css">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script defer src="js/3dmouseControl.js"></script>
+  <script defer src="js/order.js"></script>
 </head>
 
 <body>
-  <!-- <div id="info">
-            OBJ loader
-		</div> -->
-
-  <script src="https://threejs.org/build/three.min.js"></script>
-  <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
-
-  <!-- <script src="http://threejs.org/examples/js/Detector.js"></script> -->
-  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-  <script src="js/3dmouseControl.js"></script>
-  <script src="js/order.js"></script>
 
   <div class="vbox viewport">
     <!-- <header>header</header> -->
     <header class="hbox space-between">
       <article style="width: 200px;">
         <div id="logo">Optimice</div>
+        <!-- <button id="btn1">btn</button> -->
       </article>
       <article class="flex tab-active" id="1" onclick="navigate(this.id); container.appendChild( renderer.domElement );">
         <div class="head-option">
@@ -94,10 +89,10 @@
       </article>
       <article class="flex pad">
         <section class="main vbox space-between">
-          <article class="flex hide block"></article>
+          <!-- <article class="flex hide block"></article> -->
           <article class="flex block">
             <div class="detail-option">
-              <p>Material</p>
+              <p>Top piece Material</p>
               <p>
                 <input type="radio" id="resin" name="material" value="resin" onchange="changeMaterial(this)">
                 <label for="resin">Resin</label>
@@ -110,16 +105,44 @@
           </article>
           <article class="flex block">
             <div class="detail-option">
-              <p>Color</p>
+              <p>Bottom Piece Material</p>
               <p>
-                <input type="radio" id="black" name="color" value="black" onchange="changeColor(this)">
-                <label for="black">Black</label>
-                <input type="radio" id="white" name="color" value="white" onchange="changeColor(this)">
-                <label for="white">White</label>
+                <input type="radio" id="resin" name="material" value="resin" onchange="changeMaterial(this)">
+                <label for="resin">Resin</label>
+                <input type="radio" id="pbt" name="material" value="pbt" onchange="changeMaterial(this)">
+                <label for="pbt">PBT</label>
+                <input type="radio" id="abs" name="material" value="abs" onchange="changeMaterial(this)">
+                <label for="abs">ABS</label>
               </p>
             </div>
           </article>
-          <article class="flex hide block"></article>
+          <article class="flex block">
+            <div class="detail-option">
+              <p>Top piece Color</p>
+              <p>
+                <input type="radio" id="black" name="color" value="black" onchange="changeColor(147,this)">
+                <label for="black">Black</label>
+                <input type="radio" id="white" name="color" value="white" onchange="changeColor(147,this)">
+                <label for="white">White</label>
+                <input type="radio" id="transparent" name="color" value="transparent" onchange="changeColor(147,this)">
+                <label for="transparent">Transparent</label>
+              </p>
+            </div>
+          </article>
+          <article class="flex block">
+            <div class="detail-option">
+              <p>Bottom piece Color</p>
+              <p>
+                <input type="radio" id="black" name="color" value="black" onchange="changeColor(146,this)">
+                <label for="black">Black</label>
+                <input type="radio" id="white" name="color" value="white" onchange="changeColor(146,this)">
+                <label for="white">White</label>
+                <input type="radio" id="transparent" name="color" value="transparent" onchange="changeColor(146,this)">
+                <label for="transparent">Transparent</label>
+              </p>
+            </div>
+          </article>
+          <!-- <article class="flex hide block"></article> -->
         </section>
       </article>
     </section>

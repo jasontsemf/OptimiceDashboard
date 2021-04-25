@@ -2,41 +2,55 @@
 <html lang="en">
 
 <head>
+    <title>OptiMice 🖱</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
     <link rel="stylesheet" href="fa/css/all.css">
-    <title>OptiMice 🖱</title>
+    <script src="js/main.js"></script>
 </head>
 <script src="js/login.js"></script>
+
 <body>
-    <a href="https://github.com/jasontsemf/OptiMice"><i class="fab fa-github top-right"></i></a>
-    <div class="wrapper">
+    <div class="vbox viewport">
+        <!-- <div class="wrapper-landing"> -->
+        <a href="https://github.com/jasontsemf/OptiMice"><i class="fab fa-github top-right"></i></a>
         <div class="row">
-            <img src="assets/optimice.png" alt="mouse" class="landing-mouse">
+            <img src="assets/img/mouse-rendering-3.png" alt="mouse" class="landing-mouse">
+            <img src="assets/img/mouse-rendering.png" alt="mouse" class="landing-mouse-mobile">
         </div>
-        <div class="row">
-            <h1>Welcome to OptiMice</a> 🖱</h1>
-        </div>
-        <div class="row">
-            <p class="msg">OptiMice is a novel, online customer experience which offers tailor-made computer mice to professional computer users who care about ergonomics, productivity and customization by harnessing 3D printing and photogrammetry technology.</p>
-        </div>
-        <div class="row">
-            <h3 class="msg"><a href="https://jasontsemf.github.io/optimice.html">Learn more about the project</a></h3>
-        </div>
-        <div class="row">
-            <button class="btn" onclick="location.href = 'login.html';">Login - Demo</button>
-            <button class="btn" onclick="location.href = 'signup.html';">Sign Up</button>
-        </div>
-        <div class="row">
+        <div style="margin: 30px 0px">
+            <div class="row">
+                <h1>Welcome to OptiMice</a> 🖱</h1>
+            </div>
+            <div class="row">
+                <p class="msg">OptiMice is a novel online tailormade customer experience. Harnessing machine learning
+                    and additive manufacturing technology, its manufacturing pipeline offers bespoke computer mice to
+                    professional computer users.
+                </p>
+            </div>
+            <div class="row">
+                <!-- <button class="btn" onclick="location.href = 'login.html';">Login - Demo</button> -->
+                <button class="btn" onclick="location.href = 'scan.html';">Try Now</button>
+                <button class="btn" onclick="location.href = 'signup.html';">Sign Up</button>
+            </div>
+            <div class="row">
+                <h3 class="msg"><a href="https://jasontsemf.github.io/optimice.html">Learn more about the project</a>
+                </h3>
+            </div>
         </div>
     </div>
 </body>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+</style>
 
 </html>

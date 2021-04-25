@@ -4,22 +4,19 @@
 <head>
   <title>Dashboard</title>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
   <link rel="stylesheet" href="css/dashboard.css">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="fa/css/all.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <script src="https://threejs.org/build/three.min.js"></script>
+  <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
+  <!-- <script src="http://threejs.org/examples/js/Detector.js"></script> -->
+  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
+  <script defer src="js/3dmouse.js"></script>
 </head>
 
 <body>
-  <!-- <div id="info">
-            OBJ loader
-		</div> -->
-  <script src="https://threejs.org/build/three.min.js"></script>
-  <script src="https://threejs.org/examples/js/loaders/OBJLoader.js"></script>
-
-  <!-- <script src="http://threejs.org/examples/js/Detector.js"></script> -->
-  <script src="https://threejs.org/examples/js/libs/stats.min.js"></script>
-  <script src="js/3dmouse.js"></script>
 
   <div class="vbox viewport">
     <header class="hbox space-between">
@@ -38,7 +35,8 @@
       <!-- <article class="flex2">flex</article> -->
       <article class="flex">
         <a id="slogan" href="order.html">
-          <h1>Your Optimice is Ready for Order</h1>
+          <!-- hi your name -->
+          <h1>Hi Jason! <br> Your OptiMice is Ready</h1>
         </a>
       </article>
     </section>
@@ -65,5 +63,15 @@
     <!-- <footer>fixed: 50px</footer> -->
   </div>
 </body>
+<style>
+  body {
+      opacity: 0;
+      transition-duration: 0.7s;
+      transition-property: opacity;
+  }
 
+  body.fade {
+      opacity: 1;
+  }
+</style>
 </html>
