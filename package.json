@@ -19,7 +19,7 @@
     "mongoose": "^5.9.3",
     "morgan": "^1.9.1",
     "nedb": "^1.8.0",
-    "three": "^0.114.0"
+    "three": "^0.137.0"
   },
   "devDependencies": {}
 }
