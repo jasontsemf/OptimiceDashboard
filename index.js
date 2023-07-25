@@ -11,10 +11,10 @@ const mongoose = require('mongoose');
 const moment = require('moment');
 
 const MONGODB_URI = config.MONGODB_URI;
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true 
-});
+// mongoose.connect(MONGODB_URI, {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true 
+// });
 
 const peopleDB = require('./models/people');
 const ordersDB = require('./models/orders');
