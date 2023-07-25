@@ -98,6 +98,6 @@ app.post('/api/orders', async (req, res, next) => {
   }
 });
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(config.PORT || 3000, () => {
   console.log("Server listening at http://localhost:3000!")
 });
