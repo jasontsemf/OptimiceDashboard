@@ -2,8 +2,6 @@
 FROM node:16-alpine
 
 EXPOSE 8080
-EXPOSE 80
-EXPOSE 3000
 
 # Set the working directory in the container
 WORKDIR /app
